@@ -141,7 +141,7 @@ while nb_coup<3: #Tant que le nombre de coup est inférieur à 3, alors le joueu
                     
                 while mise > solde or mise < 1 : #Si la mise est plus grande que le solde ou plus petite que 1 alors on lui demande de rentrer une nouvelle valeur
                     print("Erreur. Votre solde est de ",solde,"€. Vous ne pouvez excéder cette somme")
-                    mise = int(input("Rentrer votre mise. Maximum (voir votre solde) / Minimum 1€ : €")) 
+                    mise = int(input("Rentrer votre mise. Maximum (voir votre solde) / Minimum 1€ : €\b")) 
 
         
             if suite == 0: #Si le joueur ne veut pas rejouer alors le programme s'arrête
@@ -168,8 +168,8 @@ while nb_coup<3: #Tant que le nombre de coup est inférieur à 3, alors le joueu
             sinon taper 0 pour arrêter """))
 
         if nb_coup == 2:
-            gain = mise - mise
-            solde = solde -mise + gain
+            gain = mise * 1
+            solde = solde - mise + gain
             print(solde)
             print("Félicitation", user_name, "Vous avez gagné en {} coup(s)".format(nb_coup))
             niv2=int(input("""Vous pouvez passer au niveau 2. Si vous souhaiter vous continuer taper 1, \n
@@ -195,7 +195,6 @@ while nb_coup<3: #Tant que le nombre de coup est inférieur à 3, alors le joueu
                     print("Votre mise est trop petite")
 
                 mise = int(input("Rentrer votre mise. Maximum 10€, minimum 1€ :€" ))
-            print(nb_ordi2)
 
             while nb_coup < 5:
 
@@ -296,7 +295,6 @@ while nb_coup<3: #Tant que le nombre de coup est inférieur à 3, alors le joueu
                         reussi2 = 2 / nb_total2
                         print("Votre pourcentage de réussite est de ", reussi1)
 
-                        print(nb_ordi3)
                         print("Votre nouveau solde est de : €", solde)
                         mise = int(input("Rentrer votre mise. Maximum : votre solde, minimum 1€ :€" ))
 
@@ -461,11 +459,3 @@ if nb_user != nb_ordi1: #Que le joueur perde ou gagne, on indique la nombre qu'i
     nb_ordi1=str(nb_ordi1)
     print('Le nombre était ', nb_ordi1)
     nb_ordi1=int(nb_ordi1)
-
-
-
-
-
-   
-
-
