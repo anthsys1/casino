@@ -141,7 +141,7 @@ while nb_coup<3: #Tant que le nombre de coup est inférieur à 3, alors le joueu
                     
                 while mise > solde or mise < 1 : #Si la mise est plus grande que le solde ou plus petite que 1 alors on lui demande de rentrer une nouvelle valeur
                     print("Erreur. Votre solde est de ",solde,"€. Vous ne pouvez excéder cette somme")
-                    mise = int(input("Rentrer votre mise. Maximum (voir votre solde) / Minimum 1€ : €\b")) 
+                    mise = int(input("Rentrer votre mise. Maximum (voir votre solde) / Minimum 1€ : €")) 
 
         
             if suite == 0: #Si le joueur ne veut pas rejouer alors le programme s'arrête
